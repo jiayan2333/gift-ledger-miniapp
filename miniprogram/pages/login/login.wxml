@@ -1,0 +1,28 @@
+<view class="login-page">
+  <view class="brand-block">
+    <view class="brand-row">
+      <image class="brand-mark" src="/assets/login/leaf-mark.png" mode="aspectFill"/>
+      <view class="brand">份子钱</view>
+    </view>
+    <view class="slogan">记住每一份人情。</view>
+  </view>
+
+  <image class="ledger-hero" src="/assets/login/ledger-still-life.jpg" mode="aspectFill"/>
+
+  <view class="action-area">
+    <view class="promise"><text>日常记账，永久免费。</text></view>
+    <button class="login-btn {{agreed?'ready':''}}" bindtap="login" loading="{{loading}}" disabled="{{loading}}">
+      <image wx:if="{{!loading}}" class="wechat-icon" src="/assets/login/wechat-icon.jpg" mode="aspectFill"/>
+      <text>{{loading?'登录中':'微信登录'}}</text>
+    </button>
+    <checkbox-group bindchange="agreementChange">
+      <view class="agree">
+        <checkbox class="agreement-checkbox" value="agreed" checked="{{agreed}}" color="#76563F"/>
+        <text>我已阅读并同意</text>
+        <text class="link" catchtap="showUserAgreement">《用户协议》</text>
+        <text>和</text>
+        <text class="link" catchtap="showPrivacyPolicy">《隐私政策》</text>
+      </view>
+    </checkbox-group>
+  </view>
+</view>

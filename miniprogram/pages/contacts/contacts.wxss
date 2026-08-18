@@ -1,0 +1,14 @@
+.contacts-page{padding-top:58rpx}
+.contacts-head{display:flex;align-items:flex-end;justify-content:space-between}
+.add{width:102rpx;height:102rpx;line-height:94rpx;border-radius:34rpx;background:var(--primary);color:#fff;font-size:55rpx;padding:0;margin:0;box-shadow:0 12rpx 28rpx rgba(35,55,51,.12)}
+.search-wrap{background:var(--surface);border:1rpx solid var(--line);border-radius:24rpx;padding:0 26rpx;margin:42rpx 0 32rpx}
+.search{height:92rpx;width:100%}
+.letter{font-size:26rpx;color:var(--primary);font-weight:700;letter-spacing:3rpx;margin:28rpx 8rpx 12rpx}
+.contact-group{background:var(--surface);border-radius:26rpx;padding:0 24rpx}
+.contact-row{display:flex;align-items:center;min-height:126rpx;border-bottom:1rpx solid var(--line)}
+.contact-row:last-child{border-bottom:0}
+.avatar-letter{width:72rpx;height:72rpx;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--soft);color:var(--primary);font-size:32rpx;font-weight:650}
+.contact-copy{flex:1;margin-left:22rpx}
+.contact-name{font-size:34rpx;font-weight:650}
+.relationship{font-size:24rpx;margin-top:6rpx}
+.first{margin-top:30rpx}

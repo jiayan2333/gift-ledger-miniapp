@@ -1,0 +1,27 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/home/home",
+    "pages/contacts/contacts",
+    "pages/contact-edit/contact-edit",
+    "pages/contact-detail/contact-detail",
+    "pages/contact-records/contact-records",
+    "pages/record-edit/record-edit",
+    "pages/profile/profile",
+    "pages/profile-edit/profile-edit",
+    "pages/ledgers/ledgers",
+    "pages/ledger-new/ledger-new",
+    "pages/ledger-detail/ledger-detail",
+    "pages/ledger-batch/ledger-batch"
+  ],
+  "window": { "navigationBarTitleText": "份子钱", "navigationBarBackgroundColor": "#F7F8FA", "navigationBarTextStyle": "black", "backgroundColor": "#F7F8FA" },
+  "tabBar": {
+    "color": "#8B9098", "selectedColor": "#2F766D", "backgroundColor": "#FFFFFF",
+    "list": [
+      { "pagePath": "pages/home/home", "text": "主页" },
+      { "pagePath": "pages/contacts/contacts", "text": "记一笔" },
+      { "pagePath": "pages/profile/profile", "text": "我的" }
+    ]
+  },
+  "style": "v2", "sitemapLocation": "sitemap.json"
+}

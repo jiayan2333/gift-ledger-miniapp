@@ -1,0 +1,18 @@
+<view class="page theme-{{theme}} contacts-page">
+  <view class="contacts-head">
+    <view><view class="eyebrow">CONTACTS</view><view class="title">记一笔</view></view>
+    <button class="add" bindtap="add" aria-label="添加联系人">＋</button>
+  </view>
+  <view class="search-wrap"><input class="search" placeholder="搜索联系人" value="{{keyword}}" bindinput="search"/></view>
+  <view wx:if="{{!groups.length}}" class="empty">还没有联系人<view><button class="ghost first" bindtap="add">添加第一个联系人</button></view></view>
+  <block wx:for="{{groups}}" wx:key="initial">
+    <view class="letter">{{item.initial}}</view>
+    <view class="contact-group">
+      <view wx:for="{{item.items}}" wx:key="_id" wx:for-item="contact" class="contact-row" data-id="{{contact._id}}" bindtap="open">
+        <view class="avatar-letter">{{contact.initialChar}}</view>
+        <view class="contact-copy"><view class="contact-name">{{contact.name}}</view><view class="muted relationship">{{contact.relationship||'未填写关系'}}</view></view>
+        <text class="chevron">›</text>
+      </view>
+    </view>
+  </block>
+</view>

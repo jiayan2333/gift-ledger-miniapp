@@ -1,0 +1,19 @@
+page{background:#F8F3EB}
+.login-page{min-height:100vh;box-sizing:border-box;background:#F8F3EB;color:#352C25;padding-top:calc(env(safe-area-inset-top) + 86rpx);padding-bottom:calc(env(safe-area-inset-bottom) + 38rpx);display:flex;flex-direction:column;overflow:hidden}
+.brand-block{padding:0 72rpx;position:relative;z-index:2}
+.brand-row{display:flex;align-items:center}
+.brand-mark{width:82rpx;height:112rpx;border-radius:28rpx;flex:none}
+.brand{font-family:"STSong","Songti SC","SimSun",serif;font-size:74rpx;line-height:1;font-weight:700;letter-spacing:6rpx;color:#6D503D;margin-left:22rpx}
+.slogan{font-family:"STSong","Songti SC","SimSun",serif;font-size:38rpx;letter-spacing:10rpx;color:#7E876B;margin-top:24rpx}
+.ledger-hero{width:100%;height:43vh;min-height:570rpx;max-height:720rpx;margin-top:38rpx;display:block}
+.action-area{margin-top:auto;padding:34rpx 72rpx 0}
+.promise{text-align:center;font-family:"STSong","Songti SC","SimSun",serif;font-size:31rpx;letter-spacing:3rpx;color:#604E42;margin-bottom:38rpx}
+.promise text{padding:0 10rpx 5rpx;border-bottom:8rpx solid #D8D7B1}
+.login-btn{height:98rpx;display:flex;align-items:center;justify-content:center;gap:14rpx;background:#76563F!important;color:#FFFDF9!important;border-radius:14rpx;font-size:34rpx;font-weight:500;letter-spacing:2rpx;box-shadow:none;opacity:.9}
+.login-btn.ready{opacity:1}
+.login-btn::after{border:0}
+.wechat-icon{width:48rpx;height:48rpx;border-radius:8rpx}
+.agree{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;color:#8A8179;font-size:22rpx;line-height:1.8;margin-top:28rpx}
+.agreement-checkbox{transform:scale(.76);margin-right:-5rpx}
+.link{color:#727B60}
+@media (max-height:700px){.login-page{padding-top:calc(env(safe-area-inset-top) + 42rpx)}.brand-mark{width:68rpx;height:92rpx}.brand{font-size:62rpx}.slogan{font-size:32rpx;margin-top:16rpx}.ledger-hero{height:39vh;min-height:430rpx;margin-top:24rpx}.action-area{padding-top:20rpx}.promise{margin-bottom:24rpx}.agree{margin-top:18rpx}}

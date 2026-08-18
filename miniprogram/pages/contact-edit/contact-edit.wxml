@@ -1,0 +1,32 @@
+<view class="page theme-{{theme}} contact-edit-page">
+  <view class="edit-hero">
+    <view class="eyebrow">NEW CONTACT</view>
+    <view class="title">{{id?'编辑联系人':'添加联系人'}}</view>
+    <view class="muted edit-subtitle">只需一个名字，其余信息以后也可以补充。</view>
+  </view>
+
+  <view class="form-card">
+    <view class="form-item">
+      <view class="form-label"><text>姓名</text><text class="required">必填</text></view>
+      <input class="form-input name-input" maxlength="30" value="{{form.name}}" data-k="name" bindinput="input" placeholder="请输入联系人姓名" placeholder-class="placeholder" focus="{{!id}}"/>
+      <view class="form-hint">允许重名，最多 30 个字符</view>
+    </view>
+
+    <view class="form-item">
+      <view class="form-label"><text>与我的关系</text><text class="optional">选填</text></view>
+      <input class="form-input" value="{{form.relationship}}" data-k="relationship" bindinput="input" placeholder="如：大学同学、亲戚、同事" placeholder-class="placeholder"/>
+    </view>
+
+    <view class="form-item notes-item">
+      <view class="form-label"><text>详细备注</text><text class="optional">选填</text></view>
+      <textarea class="notes-input" maxlength="300" value="{{form.notes}}" data-k="notes" bindinput="input" placeholder="记录便于辨认的信息，例如工作城市、家人姓名等" placeholder-class="placeholder"/>
+      <view class="notes-count">{{notesLength}} / 300</view>
+    </view>
+  </view>
+
+  <view class="privacy-note">联系人信息仅保存在你的个人账本中</view>
+
+  <view class="save-bar">
+    <button class="save-button {{canSave?'active':''}}" bindtap="save" loading="{{saving}}" disabled="{{saving}}">{{saving?'保存中':'保存联系人'}}</button>
+  </view>
+</view>

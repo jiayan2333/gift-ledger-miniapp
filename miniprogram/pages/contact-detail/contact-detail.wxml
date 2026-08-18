@@ -1,0 +1,10 @@
+<view class="page theme-{{theme}} contact-detail-page">
+  <view class="person-head"><view class="person-avatar">{{nameChar}}</view><view class="person-copy"><view class="title">{{contact.name}}</view><view class="muted">{{contact.relationship||'未填写关系'}}</view></view><button class="edit-person" bindtap="edit">编辑</button></view>
+  <view wx:if="{{contact.notes}}" class="notes-card"><view class="muted notes-label">备注</view><view>{{contact.notes}}</view></view>
+  <view class="summary-card"><view class="summary-title">双方累计往来</view><view class="amount-grid"><view class="amount-block"><view class="muted">我给对方</view><view class="amount give">{{summary.givenText}}</view></view><view class="amount-block"><view class="muted">对方给我</view><view class="amount receive">{{summary.receivedText}}</view></view></view><view class="balance-row"><view><view class="muted">往来差额</view><view class="balance-message">{{summary.message}}</view></view><view class="balance-amount">{{summary.balanceText}}</view></view></view>
+  <view class="history-head"><view class="section">最近往来</view><view class="view-all" bindtap="viewRecords">查看详情 ›</view></view>
+  <view wx:if="{{!previewRecords.length}}" class="empty history-empty">还没有往来记录</view>
+  <view wx:else class="history-list"><view wx:for="{{previewRecords}}" wx:key="_id" class="history-row" data-id="{{item._id}}" bindtap="editRecord"><view class="date-block"><view class="date-day">{{item.day}}</view><view class="muted">{{item.month}}</view></view><view class="history-copy"><view class="history-event">{{item.eventName}}</view><view class="muted">{{item.direction==='RECEIVE'?'对方给我':'我给对方'}}</view></view><view class="amount {{item.direction==='RECEIVE'?'receive':'give'}}">{{item.amountText}}</view></view></view>
+  <button class="delete-contact" bindtap="remove">删除联系人</button>
+  <view class="record-bar"><button class="record-button" bindtap="record">记一笔</button></view>
+</view>
